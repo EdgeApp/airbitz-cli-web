@@ -1,0 +1,29 @@
+{
+  "name": "airbitz-cli-web",
+  "version": "0.0.1",
+  "description": "Airbitz CLI tool",
+  "private": true,
+  "author": "Airbitz, Inc.",
+  "contributors": [
+    "Paul Puey <paul@airbitz.co>",
+    "William Swanson <william@airbitz.co>"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Airbitz/airbitz-cli.git"
+  },
+  "url": "https://airbitz.co",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.13.3",
+    "standard": "^10.0.2",
+    "webpack": "^2.5.1"
+  },
+  "scripts": {
+    "build": "webpack",
+    "lint": "standard '*.js' 'src/**/*.js'",
+    "precommit": "npm run lint",
+    "start": "webpack --watch"
+  }
+}
