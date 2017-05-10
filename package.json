@@ -6,7 +6,8 @@
   "author": "Airbitz, Inc.",
   "contributors": [
     "Paul Puey <paul@airbitz.co>",
-    "William Swanson <william@airbitz.co>"
+    "William Swanson <william@airbitz.co>",
+    "Tim Horton <tim@airbitz.co>"
   ],
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
@@ -14,7 +15,10 @@
     "url": "git@github.com:Airbitz/airbitz-cli.git"
   },
   "url": "https://airbitz.co",
-  "dependencies": {},
+  "dependencies": {
+    "airbitz-cli": "^0.3.0",
+    "lib-cmdparse": "^0.1.0"
+  },
   "devDependencies": {
     "husky": "^0.13.3",
     "standard": "^10.0.2",

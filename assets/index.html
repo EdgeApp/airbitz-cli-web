@@ -9,6 +9,25 @@
 </head>
 
 <body>
+  <form id="setup" action="javascript:void(0)">
+    <label>
+      API key
+      <input id="apiKey" type="text">
+    </label>
+
+    <label>
+      appId
+      <input id="appId" type="text">
+    </label>
+
+    <label>
+      auth server
+      <input id="authServer" type="text" value="https://auth.airbitz.co/api">
+    </label>
+
+    <button type="submit">Restart</button>
+  </form>
+
   <div id="run">
     <div id="output"></div>
     <input id="command" type="text">
