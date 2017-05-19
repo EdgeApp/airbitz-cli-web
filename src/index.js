@@ -1,3 +1,4 @@
+import './tx.js'
 import { findCommand } from 'airbitz-cli'
 import { makeContext } from 'airbitz-core-js'
 import parse from 'lib-cmdparse'
