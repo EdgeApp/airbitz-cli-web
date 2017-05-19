@@ -225,6 +225,7 @@ command(
     return Promise.resolve()
   }
 )
+
 command(
   'tx-spend',
   {
