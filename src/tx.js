@@ -1,4 +1,4 @@
-import { command, UsageError } from '../command.js'
+import { command, UsageError } from 'airbitz-cli'
 import { makeShitcoinPlugin } from 'airbitz-currency-shitcoin'
 
 /**
@@ -35,7 +35,7 @@ command(
   {
     usage: '',
     help: 'Creates an blockchain engine for the selected wallet',
-    needsAccount: true
+    needsContext: true
   },
   function (console, session, argv) {
     if (argv.length !== 0) throw new UsageError(this)
@@ -47,7 +47,8 @@ command(
       id: '33LtiHFcFoXqhdrX61zOVut6QzVCBVl8LvChK1HneTc=',
       type: 'wallet:shitcoin',
       keys: {
-        masterPrivateKey: '9959a7b8cedbd8d2'
+        masterPrivateKey: '9959a7b8cedbd8d2',
+        masterPublicKey: 'pub9959a7b8cedbd8d2'
       }
     }
 
@@ -128,9 +129,9 @@ command(
       throw new Error('Call tx-make-engine first')
     }
 
-    let opts = null
+    const opts = {}
     if (argv.length === 1) {
-      opts = { currencyCode: argv[0] }
+      opts.currencyCode = argv[0]
     }
 
     console.log('balance: ', session.currencyWallet.getBalance(opts))
@@ -159,7 +160,7 @@ command(
       .getTransactions({ currencyCode })
       .then(txs => {
         console.log(`got ${txs.length} transactions`)
-        return txs.forEach(tx => console.log(JSON.stringify(tx, null, 1)))
+        return txs.forEach(tx => console.log(tx))
       })
   }
 )
