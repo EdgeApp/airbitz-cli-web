@@ -62,6 +62,10 @@ command(
       onBlockHeightChanged (height) {
         console.log('onBlockHeightChange', height)
       },
+      onNewTransactions (transactionList) {
+        console.log('onNewTransactions')
+        console.log(transactionList)
+      },
       onTransactionsChanged (transactionList) {
         console.log('onTransactionsChanged')
         console.log(transactionList)
