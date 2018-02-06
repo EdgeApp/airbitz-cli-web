@@ -16,7 +16,7 @@
   },
   "url": "https://airbitz.co",
   "dependencies": {
-    "airbitz-cli": "^0.3.0",
+    "airbitz-cli": "^0.3.2",
     "lib-cmdparse": "^0.1.0"
   },
   "devDependencies": {
